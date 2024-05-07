@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <!-- Подключение стилей CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стили для шапки профиля */
+        .profile-header {
+            position: fixed; /* Зафиксировать шапку профиля */
+            top: 0; /* Расположить ее сверху страницы */
+            width: 100%; /* Ширина 100% экрана */
+            background-color: #f0f0f0;
+            color: #fff;
+            padding: 5px 0; /* Уменьшаем верхний и нижний отступ */
+            text-align: center;
+            z-index: 1000; /* Установить z-index, чтобы шапка была выше других элементов */
+        }
+
+        .profile-nav {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .profile-nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .profile-nav li:last-child {
+            margin-right: 0;
+        }
+
+        .profile-nav a {
+            color: #000;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .profile-nav a:hover {
+            text-decoration: underline;
+        }
+
+
+        .brand-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            margin-top: 180px; /* Добавлен отступ сверху для разделения */
+        }
+
+        /* Стили для текста */
+        .brand-info p {
+            width: 30%; /* Ширина текста */
+            margin-right: 20px; /* Отступ между текстом и изображением */
+            font-family: Arial, sans-serif; /* Выбор шрифта */
+            font-size: 16px; /* Размер шрифта */
+            color: #333; /* Цвет текста */
+        }
+
+
+        /* Стили для изображения */
+        .brand-info img {
+            width: 30%; /* Уменьшаем ширину изображения */
+            max-width: 400px; /* Максимальная ширина изображения */
+            margin-left: 20px; /* Отступ слева */
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Шапка профиля -->
+    <header class="profile-header">
+        <nav>
+            <ul class="profile-nav">
+                <li><a href="products.html">Главная</a></li>
+
+                <li><a href="каталог.html">Каталог</a></li>
+                <li><a href="покупателям.html">Покупателям</a></li>
+                <li><a href="контакты.html">Контакты</a></li>
+                <li><a href="корзина.html">Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Секция бренда -->
+    <section class="brand-info">
+        <!-- Текст о бренде -->
+        <p>Контакты:
+        +7 (778) 687 36 90,
+        info@ederra.com
+        Дистрибьюторам:
+        ederralab@gmail.com</p>
+        <!-- Фото бренда -->
+        <img src="brand_image.jpg" alt="Ederra Brand">
+    </section>
+
+
+</body>
+</html>

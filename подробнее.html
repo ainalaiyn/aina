@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подробнее</title>
+    <!-- Подключение стилей CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стили для шапки профиля */
+        .profile-header {
+            position: fixed; /* Зафиксировать шапку профиля */
+            top: 0; /* Расположить ее сверху страницы */
+            width: 100%; /* Ширина 100% экрана */
+            background-color: #f0f0f0;
+            color: #fff;
+            padding: 5px 0; /* Уменьшаем верхний и нижний отступ */
+            text-align: center;
+            z-index: 1000; /* Установить z-index, чтобы шапка была выше других элементов */
+        }
+
+        .profile-nav {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .profile-nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .profile-nav li:last-child {
+            margin-right: 0;
+        }
+
+        .profile-nav a {
+            color: #000;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .profile-nav a:hover {
+            text-decoration: underline;
+        }
+
+       /* Стили для контейнера товара */
+       .product-container {
+        display: flex; /* Используем flexbox */
+        justify-content: center; /* Центрируем содержимое по горизонтали */
+        align-items: center; /* Центрируем содержимое по вертикали */
+        margin-top: 100px; /* Отступ сверху, чтобы не перекрывалась шапка */
+        text-align: left; /* Выравниваем текст слева */
+    }
+
+    .product-details {
+        flex: 1; /* Растягиваем блок с деталями товара, чтобы он занимал всю доступную ширину */
+        padding: 20px; /* Добавляем внутренние отступы */
+    }
+
+    .product-details img {
+        width: 200px; /* Уменьшаем ширину изображения товара */
+        height: auto; /* Автоматическая высота для сохранения пропорций */
+        margin-right: 20px; /* Отступ справа от изображения */
+    }
+
+    .product-details h2 {
+        font-size: 24px; /* Размер заголовка */
+        margin-bottom: 10px; /* Отступ снизу заголовка */
+    }
+
+    .product-details p {
+        font-size: 18px; /* Размер текста описания */
+        margin-bottom: 10px; /* Отступ снизу текста описания */
+    }
+
+    .product-details button {
+        padding: 10px 20px; /* Отступы внутри кнопки */
+        font-size: 18px; /* Размер текста кнопки */
+        background-color: #000; /* Цвет фона кнопки */
+        color: #fff; /* Цвет текста кнопки */
+        border: none; /* Убираем границу у кнопки */
+        cursor: pointer; /* Изменяем курсор при наведении */
+    }
+
+    .product-details button:hover {
+        background-color: #390dd5; /* Цвет фона кнопки при наведении */
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+    }
+    #todo-list {
+        max-width: 400px;
+        margin-left: 740px;
+        margin-top: -200px;
+
+
+    }
+    .todo-item {
+        margin-bottom: 10px;
+    }
+    .todo-item.completed {
+        text-decoration: line-through;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Шапка профиля -->
+    <header class="profile-header">
+        <nav>
+            <ul class="profile-nav">
+                <li><a href="products.html">Главная</a></li>
+
+                <li><a href="каталог.html">Каталог</a></li>
+                <li><a href="покупателям.html">Покупателям</a></li>
+                <li><a href="контакты.html">Контакты</a></li>
+                <li><a href="корзина.html">Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Контейнер для товара -->
+        <div class="product-container">
+            <!-- Изображение товара -->
+            <img src="product1.jpg" alt="Название товара">
+            <!-- Детали товара -->
+            <div class="product-details">
+                <h2>Восстанавливающий бессульфатный шампунь для питания и укрепления поврежденных волос</h2>
+                <p>Глубокое деликатное очищение волос.</p>
+                <p>Шампунь снижает электризуемость, увлажняет, восстанавливает после окрашивания и химических завивок, облегчает расчёсывание, убирает чрезмерную ломкость.</p>
+                <p>Состав: Aloe barbadensis leaf juice, Aqua, Lauramidopropyl Betaine, Cocamide DЕА, Sodium Chloride, C20-24 Alkyl Dimethicone, GuarHydroxypropyltrimonium Chloride, Acrylates/C10-30 Alkyl AcrylateCrosspolymer, Vitamin A (Retinyl Palmitate ), Vitamin F (Linoleicand Linolenic Acids), Vitamin E (Tocopheryl Acetate), Vitamin B5 (Panthenol), Melaleuca Alternifolia Leaf (Tea Tree) Oil, HydrolyzedCollagen, Hydrolyzed Wheat Protein,Methicone, Carbocysteine, Hydrolyzed Silk, Hydroxypropyltrimonium Hydrolyzed VegetableProtein, Potassium Sorbate, Sodium Benzoate, Parfum.</p>
+                <p>Объем: 600 мл</p>
+                <p>Цена: 15.000 тг</p>
+                <!-- Кнопка "Добавить в корзину" -->
+                <button onclick="addToCart()">Добавить в корзину</button>
+            </div>
+        </div>
+
+
+        <div id="todo-list">
+            <h1>Оставить отзыв</h1>
+            <input type="text" id="new-task" placeholder="напишите свое мнение">
+            <button onclick="addTask()">Добавить</button>
+            <ul id="tasks"></ul>
+        </div>
+
+    </main>    
+    
+    <script>
+        function addToCart() {
+            // Реализация добавления товара в корзину
+            alert("Товар добавлен в корзину!");
+        }
+
+
+        function addTask() {
+        var taskInput = document.getElementById("new-task");
+        var taskText = taskInput.value.trim();
+        if (taskText !== "") {
+            var tasksList = document.getElementById("tasks");
+            var newTaskItem = document.createElement("li");
+            newTaskItem.className = "todo-item";
+            newTaskItem.innerHTML = taskText + '<button onclick="removeTask(this)">Удалить</button>';
+            tasksList.appendChild(newTaskItem);
+            taskInput.value = "";
+        } else {
+            alert("Оставьте отзыв!");
+        }
+    }
+
+    function toggleTaskCompletion(checkbox) {
+        var taskItem = checkbox.parentNode;
+        if (checkbox.checked) {
+            taskItem.classList.add("completed");
+        } else {
+            taskItem.classList.remove("completed");
+        }
+    }
+
+    function removeTask(button) {
+        var taskItem = button.parentNode;
+        taskItem.parentNode.removeChild(taskItem);
+    }
+
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <!-- Подключение стилей CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стили для шапки профиля */
+        .profile-header {
+            position: fixed; /* Зафиксировать шапку профиля */
+            top: 0; /* Расположить ее сверху страницы */
+            width: 100%; /* Ширина 100% экрана */
+            background-color: #f0f0f0;
+            color: #fff;
+            padding: 5px 0; /* Уменьшаем верхний и нижний отступ */
+            text-align: center;
+            z-index: 1000; /* Установить z-index, чтобы шапка была выше других элементов */
+        }
+
+        .profile-nav {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .profile-nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .profile-nav li:last-child {
+            margin-right: 0;
+        }
+
+        .profile-nav a {
+            color: #000;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .profile-nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Стили для секции продуктов */
+        .products {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px; /* Отступ сверху */
+            padding-top: 20px; /* Дополнительный внутренний отступ сверху */
+        }
+
+
+        .product {
+            position: relative;
+            width: 25%; /* Уменьшаем ширину продуктов */
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease; /* Плавное изменение transform при наведении */
+        }
+
+        .product:hover {
+            transform: translateY(-10px); /* Поднимаем фото на 10px при наведении */
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .product p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        /* Стили для кнопок "Подробнее" и "Добавить в корзину" */
+        .product button {
+            display: inline-block;
+            padding: 8px 16px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+        }
+
+        .product button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+       
+
+
+    </style>
+</head>
+<body>
+    <!-- Шапка профиля -->
+    <header class="profile-header">
+        <nav>
+            <ul class="profile-nav">
+                <li><a href="products.html">Главная</a></li>
+
+                <li><a href="каталог.html">Каталог</a></li>
+                <li><a href="покупателям.html">Покупателям</a></li>
+                <li><a href="контакты.html">Контакты</a></li>
+                <li><a href="корзина.html">Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Секция продуктов -->
+    <section class="products">
+        <!-- Продукт 1 -->
+        <div class="product">
+            <img src="product1.jpg" alt="Продукт 1">
+            <h3>Несмываемый спрей-кондиционер</h3>
+            <p>Цена: 10.000 тг</p>
+            <button>
+                <a href="подробнее.html">Подробнее</a>
+            </button>
+            <button onclick="addToCart()">Добавить в корзину</button>
+        </div>
+        <!-- Продукт 2 -->
+        <div class="product">
+            <img src="product2.jpg" alt="Продукт 2">
+            <h3>Шампунь бессульфатный</h3>
+            <p>Цена: 15.000 тг</p>
+        <button><a href="подробнее.html">Подробнее</a></button>
+            <button onclick="addToCart()">Добавить в корзину</button>
+        </div>
+        <!-- Продукт 3 -->
+        <div class="product">
+            <img src="product3.jpg" alt="Продукт 3">
+            <h3>Маска для волос</h3>
+            <p>Цена: 15.000 тг</p>
+        <button>
+                <a href="подробнее.html">Подробнее</a>
+            </button>
+            <!-- Кнопка "Добавить в корзину" -->
+            <button onclick="addToCart()">Добавить в корзину</button>
+        </div>
+
+       
+
+    </section>
+
+    <script>
+        function addToCart() {
+            // Реализация добавления товара в корзину
+            alert("Товар добавлен в корзину!");
+        }
+
+
+
+    </script>
+
+</body>
+</html>
